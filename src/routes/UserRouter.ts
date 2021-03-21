@@ -5,7 +5,7 @@ import UserController from "../controllers/UserController";
 const router: Router = express.Router();
 
 
-router.get("/", UserController.getUserInfo);
+router.get("/:username", UserController.getUserInfo);
 
 
 export {
