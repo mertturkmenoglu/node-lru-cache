@@ -5,6 +5,7 @@ import helmet from "helmet";
 
 
 import { morganFormat } from "./config/MorganConfig";
+import { UserRouter } from "./routes/UserRouter";
 
 
 const app = express();
@@ -15,6 +16,9 @@ app.use(express.json());
 app.use(morgan(morganFormat));
 app.use(cors());
 app.use(helmet());
+
+
+app.use("/api/v1", UserRouter);
 
 
 app.listen(PORT, () => {
