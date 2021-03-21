@@ -1,0 +1,1 @@
+export const morganFormat = '[:date[web]] || :method :url  || Status: :status || Response time: :response-time ms';
